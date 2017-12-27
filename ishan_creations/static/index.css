@@ -1,0 +1,112 @@
+#logo_up {
+	width: 50%;
+	margin: 0 auto;
+}
+.intro_text {
+	font-size: 35px;
+	font-family: Trebuchet MS;
+	text-align: center;
+}
+#message {
+	font-size: 25px;
+	font-family: 'avenirbook', sans-serif;
+	font-weight: 500;
+}
+#message_div {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.individual {
+	width: 80%;
+	margin-left: 20%;
+	text-align: left;
+}
+#inside_individual {
+	width: 80%;
+}
+#right {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'avenirbook', sans-serif;
+	font-weight: 200;
+
+}
+#get_text {
+	font-family: fantasy;
+}
+p {
+	font-family: Arial;
+	font-size: 22px;
+	text-align: justify;
+}
+#logo {
+	width: 100%;
+	background-color: white;
+	height: 20%;
+}
+li {
+	list-style-type: none;
+}
+#vision {
+	width: 90%;
+	margin: 0 auto;
+}
+#text {
+	font-size: 18px;
+}
+#text2 {
+	font-size: 16px;
+}
+.xyz {
+	text-align: center;
+	font-size: 30px;
+}
+.xyz1 {
+	text-align: center;
+	font-size: 21px;
+
+}
+.xyz2 {
+	text-align: center;
+	font-size: 15px;
+
+}
+#center_vision {
+	text-align: center;
+}
+#vision_span {
+	text-align: center;
+}
+#size_small {
+	font-size: 22px;
+}
+#center_it {
+	text-align: center;
+}
+@media only screen and (max-width: 500px) {
+    .intro_text {
+    	font-size: 25px;
+    }
+
+    .individual {
+    	font-size: 15px;
+    	margin: 0 auto;
+    }
+    #right {
+    	font-size: 17px;
+    }
+    p{
+    	margin-left: 2%;
+    	font-size: 18px;
+    	margin-right: 2%;
+    }
+    img {
+    	width: 60%;
+
+    }
+    .img_vision {
+    	width: 100%;
+    }
+
+}

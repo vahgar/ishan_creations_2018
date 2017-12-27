@@ -1,0 +1,79 @@
+{% extends "base2.html" %}
+{% load staticfiles %}
+
+
+
+
+{% block content %}
+
+<h1> Business Categories </h1>
+
+<div>
+<div class="container">
+	<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <form action="{% url 'entity:category_search' %}" method="POST"> {% csrf_token %}
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                  {{ form.search }}
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+          </form>
+        </div>
+	</div>
+</div>
+
+
+<h2> Explore our categories</h2>
+
+  <div class="category_div container categories">
+		{% for obj in category_list %}
+  		<a href="{{ obj.get_absolute_url }}"> {{ obj.name }}</a> |
+		{% endfor %}
+  </div>
+
+
+</div>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+
+<!-- <script>
+
+data = [];
+data_2 = [];
+
+{% for obj in category_list %}
+
+  var a = "{{obj.name}}"
+	var b = "{{ obj.get_absolute_url }}"
+  data.push(a)
+	data_2.push(b)
+
+{% endfor %}
+
+var a = "| "
+
+for (var i=0;i<data.length;i++)
+{
+  a = a + " <a href="+data_2[i]+">"+ data[i] +"</a> |"
+
+}
+  $(".categories").append(a)
+
+
+
+
+// console.log(a)
+
+
+
+
+</script> -->
+
+
+{% endblock content %}

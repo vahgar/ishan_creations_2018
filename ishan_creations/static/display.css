@@ -1,0 +1,155 @@
+.fixed {
+    position: fixed;
+    width: 100%;
+    background-color: #bf7fbf;
+    z-index: 9999;
+    top: 0;
+}
+#inside_section_2 {
+  display: none;
+}
+#inside_section_1 {
+  display: none;
+}
+body {
+  background-color: #800080;
+}
+.top {
+  top:50px;
+}
+.navbar {
+  background-color: #800080;
+}
+#navbar {
+  border-bottom: 2px solid #bf7fbf;
+}
+.mother-div{
+  background-color: #800080;
+}
+#font {
+  font-size: 1.1em;
+  color: white;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#background {
+  background-color: #800080;
+}
+#name {
+  font-size:1.2em;
+  color: white;
+  font-family:  Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: italic;
+}
+#image_div {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+#image_div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form_div {
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+}
+.btn-center {
+  width: 70px;
+  margin: 0 auto;
+}
+h2 {
+  color: #bf7fbf;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.8em;
+
+  margin-top: 3%;
+  margin-bottom: 3%;
+  text-align: center;
+
+}
+h3 {
+  color: #bf7fbf;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 5%;
+
+}
+.box {
+  width: 70%;
+  margin: 0 auto;
+  border: 2px solid #8c198c;
+  border-radius: 5px;
+  background-color: #b266b2;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+a {
+  text-decoration:  none;
+}
+.name-entity {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.7em;
+  color: #330033;
+  padding: 3% 3% 3% 3%;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.border-bottom {
+  border-bottom: solid 2px #8c198c;
+  background-color: #b266b2;
+}
+.border-top {
+  border-top: solid 2px #8c198c;
+}
+.profile {
+  color: white;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.3em;
+  padding-left: 3%;
+  text-decoration: underline;
+}
+.discription {
+  color: white;
+  padding-left: 3%;
+  text-align: justify;
+  font-size: 1.1em;
+  padding-right: 3%;
+
+}
+.link {
+  border-top: solid 2px #8c198c;
+  font-size: 1.5em;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: right;
+
+}
+.space {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+@media only screen and (max-width: 500px) {
+.name-entity {
+  font-size: 1.4em;
+}
+h2 {
+  font-size: 1.5em;
+}
+.discription {
+  font-size: 0.9em;
+}
+.profile {
+  font-size: 1.1em;
+}
+
+}

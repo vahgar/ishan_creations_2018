@@ -1,0 +1,50 @@
+{% extends "base2.html" %}
+{% load staticfiles %}
+
+
+{% block css %}
+<link rel="stylesheet"  type="text/css" href="{% static "result.css" %}" />
+{% endblock css %}
+
+
+{% block content %}
+
+<br>
+<br>
+<div class="container">
+  <h4> <a>Showing results for "{{ query }}" </a></p></h4>
+
+  <h1>Business Entities</h1>
+
+{% for obj in Entities %}
+
+<hr>
+
+<div class="media entity">
+  <div>
+  {% if obj.image_1 %}
+  <img class="mr-3" src="{{ obj.image_1.url }}" height="200px" width="200px" alt="Generic placeholder image">
+  {% endif %}
+  </div>
+  <hr>
+  <div class="media-body">
+    <h3 class="mt-0">{{obj.name}} <i class="fa fa-check-circle" aria-hidden="true"></i></h3>
+    <h5>Profile</h5>
+    {{ obj.profile }}<br>
+    <h5>Services</h5>
+    {{ obj.services | truncatechars:120 }}<br>
+    <h5>Phone</h5>
+    {{obj.mobile}}
+  </div>
+</div>
+
+
+{% endfor %}
+
+
+
+
+
+
+<div>
+{% endblock content %}
