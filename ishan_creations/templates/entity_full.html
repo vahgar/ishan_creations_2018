@@ -4,15 +4,37 @@
 
 {% block css %}
 
-<link href="{% static 'entity_full.css' %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static "entity_full.css" %}">
 
 {% endblock css %}
 
 {% block content %}
 
-<div class="container">
+<br>
 
-  This Is Demo Text
+<div class="container flex">
+
+  <div class="image">
+    <img src="{{ Entity.image_1.url }}" height="200" width="200">
+  </div>
+
+  <div class="data">
+    <h3> {{ Entity.name }} </h3>
+    <span>{{ Entity.profile }}</span><br>
+    <hr>
+    <span id="head">Services: </span> <span>{{ Entity.services }} </span> </p>
+    <hr>
+    <div class="row flex2">
+      
+      <div class="col"> <i class="fa fa-clock-o" aria-hidden="true"></i> {{ Entity.timings }} </div>
+      <div class="col"> <i class="fa fa-phone" aria-hidden="true"></i> {{ Entity.mobile }} </div>
+      <div class="col"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ Entity.address }}</div>
+
+    </div>
+
+
+
+  </div>
 
 
 </div>

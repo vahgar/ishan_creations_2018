@@ -28,7 +28,7 @@
   </div>
   <hr>
   <div class="media-body">
-    <h3 class="mt-0">{{obj.name}} <i class="fa fa-check-circle" aria-hidden="true"></i></h3>
+    <h3 class="mt-0"><a href= '{{ obj.get_absolute_url }}'>{{obj.name}} </a><i class="fa fa-check-circle" aria-hidden="true"></i></h3>
     <h5>Profile</h5>
     {{ obj.profile }}<br>
     <h5>Services</h5>

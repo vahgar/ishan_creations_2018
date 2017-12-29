@@ -1,0 +1,45 @@
+.flex {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #B9B9B9;
+  padding: 1% 1% 1% 1%;
+  border-bottom: 1px solid #B9B9B9;
+}
+
+.image {
+  width: 30%;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.data {
+  width: 70%;
+  text-align: justify;
+}
+
+h3 {
+  color: #b76cb5;
+  text-align: left;
+}
+
+#head {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+span {
+  font-size: 1.2em;
+}
+
+.flex2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+}
+.col {
+  text-align: left;
+  width: 33%;
+}
