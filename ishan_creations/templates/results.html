@@ -3,7 +3,7 @@
 
 
 {% block css %}
-<link rel="stylesheet"  type="text/css" href="{% static "result.css" %}" />
+<link rel="stylesheet"  type="text/css" href='{% static 'result.css' %}' />
 {% endblock css %}
 
 
@@ -18,12 +18,13 @@
 
 {% for obj in Entities %}
 
+<br>
 <hr>
 
 <div class="media entity">
   <div>
   {% if obj.image_1 %}
-  <img class="mr-3" src="{{ obj.image_1.url }}" height="200px" width="200px" alt="Generic placeholder image">
+  <img class="mr-3" src="{{ obj.image_1.url }}" height="200px" width="80%" alt="Generic placeholder image">
   {% endif %}
   </div>
   <hr>
@@ -38,7 +39,7 @@
   </div>
 </div>
 
-
+<br>
 {% endfor %}
 
 

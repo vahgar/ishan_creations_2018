@@ -14,9 +14,11 @@
 
 <div class="container flex">
 
+  {% if Entity.image_1 %}
   <div class="image">
     <img src="{{ Entity.image_1.url }}" height="200" width="200">
   </div>
+  {% endif %}
 
   <div class="data">
     <h3> {{ Entity.name }} </h3>
@@ -25,7 +27,7 @@
     <span id="head">Services: </span> <span>{{ Entity.services }} </span> </p>
     <hr>
     <div class="row flex2">
-      
+
       <div class="col"> <i class="fa fa-clock-o" aria-hidden="true"></i> {{ Entity.timings }} </div>
       <div class="col"> <i class="fa fa-phone" aria-hidden="true"></i> {{ Entity.mobile }} </div>
       <div class="col"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ Entity.address }}</div>
