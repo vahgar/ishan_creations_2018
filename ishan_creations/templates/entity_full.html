@@ -16,8 +16,9 @@
 
   {% if Entity.image_1 %}
   <div class="image">
-    <img src="{{ Entity.image_1.url }}" height="200" width="200">
+    <img src="{{ Entity.image_1.url }}"  height="200" width="200">
   </div>
+  <br>
   {% endif %}
 
   <div class="data">
@@ -26,21 +27,60 @@
     <hr>
     <span id="head">Services: </span> <span>{{ Entity.services }} </span> </p>
     <hr>
-    <div class="row flex2">
-
-      <div class="col"> <i class="fa fa-clock-o" aria-hidden="true"></i> {{ Entity.timings }} </div>
-      <div class="col"> <i class="fa fa-phone" aria-hidden="true"></i> {{ Entity.mobile }} </div>
-      <div class="col"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ Entity.address }}</div>
-
-    </div>
-
-
-
   </div>
-
 
 </div>
 
+<div class="container flex">
+    <div class="address">
+      <h4>ADDRESS</h4>
+      <span>{{ Entity.address }}</span>
+    </div>
+    <div class="timmings">
+      <h4>Timings</h4>
+      <span>{{ Entity.timings }}
+      </span>
+    </div>
+    <div class="carousel">
+      <h4>Photos</h4>
+      <div class="stream">
+        {% for obj in pics %}
+        <div class="thumbnail">
+            <a data-toggle="modal" data-target="#{{obj.id}}">
+                <img src="{{ obj.images.url }}" class="img-fluid bod" height="35px" width="35px">
+            </a>
+          </div>
+          {% endfor %}
+      </div>
+
+          {% for obj in pics %}
+            <!-- Modal -->
+            <div class="modal fade" id="{{ obj.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{ Entity.name }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+
+                      <img src="{{ obj.images.url }}" class="img-fluid" height="100%" width="100%" class="bod">
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+</div>
 
 
 {% endblock content %}

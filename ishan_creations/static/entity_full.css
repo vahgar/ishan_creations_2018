@@ -1,9 +1,7 @@
 .flex {
   display: flex;
   justify-content: space-around;
-  border-top: 1px solid #B9B9B9;
   padding: 1% 1% 1% 1%;
-  border-bottom: 1px solid #B9B9B9;
 }
 
 .image {
@@ -44,10 +42,44 @@ span {
   width: 33%;
 }
 
+.address {
+  width: 33%;
+  text-align: center;
+
+
+}
+.timmings {
+  width: 33%;
+  text-align: center;
+
+}
+.carousel {
+  width: 33%;
+  text-align: center;
+}
+
+.bod {
+  border: 1px solid #eee;
+  display: block;
+}
+.stream {
+  display: flex;
+  justify-content: center;
+
+}
+.thumbnail {
+  margin-right: 3px;
+}
+
+
 @media only screen and (max-width: 500px) {
 
     .image {
       width: 100%;
+    }
+
+    h3 {
+      text-align: center;
     }
     .flex {
       display: block;
@@ -68,4 +100,22 @@ span {
       margin: 0 auto;
       text-align: justify;
     }
+    .address {
+      width: 100%;
+      text-align: center;
+
+
+    }
+    .timmings {
+      width: 100%;
+      text-align: center;
+
+    }
+    .carousel {
+      width: 100%;
+      text-align: center;
+      justify-content: space-around;
+
+    }
+
 }

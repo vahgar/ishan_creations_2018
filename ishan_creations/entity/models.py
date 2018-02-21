@@ -31,6 +31,8 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse("entity:category_wise", kwargs={'id':self.id})
 
+
+
 class Business_Entity(models.Model):
 
     name = models.CharField(max_length=200,blank=True);
@@ -52,8 +54,7 @@ class Business_Entity(models.Model):
     # subcategory = models.ForeignKey(SubCategory,blank=True,null=True)
     # subsubcategory = models.ForeignKey(SubsubCategory,blank=True,null=True)
     image_1 = models.FileField(upload_to = 'entity_pics/', blank = True, null=True)
-    # image_2 = models.ImageField(upload_to = 'entity_pics/', blank = True)
-    # image_3 = models.ImageField(upload_to = 'entity_pics/', blank = True)
+
 
 
     def __str__(self):
@@ -61,3 +62,10 @@ class Business_Entity(models.Model):
 
     def get_absolute_url(self):
         return reverse("entity:entity_full", kwargs={'id':self.id})
+
+
+class Display_pics(models.Model):
+    images = models.ImageField(upload_to = 'entity_pics/', blank = True, null=True)
+    entity = models.ForeignKey(Business_Entity)
+
+    

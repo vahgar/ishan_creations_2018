@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
-from .models import City, Business_Entity, Category
+from .models import City, Business_Entity, Category, Display_pics
 from django.core import serializers
 from .forms import SearchForm
 from functools import reduce
@@ -68,7 +68,10 @@ def category_wise(request, id):
 def entity_full(request, id):
 
     entity = Business_Entity.objects.get(id=id)
+    pics = Display_pics.objects.all().filter(entity=entity)
+
     context = {
         "Entity": entity,
+        "pics": pics,
     }
     return render(request, "entity_full.html", context)
