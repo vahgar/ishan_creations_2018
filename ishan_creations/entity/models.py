@@ -44,8 +44,8 @@ class Business_Entity(models.Model):
     mobile = models.CharField(max_length=20,blank=True,null=True);
     whatsapp = models.CharField(max_length=10,blank=True,null=True)
     Email = models.EmailField(max_length=70,blank=True,null=True)
-    website = models.CharField(max_length=70,default="#")
-    social_media = models.CharField(max_length=300,default="#")
+    website = models.CharField(max_length=70,blank=True,null=True)
+    social_media = models.CharField(max_length=300,blank=True,null=True)
     customer_rating = models.FloatField(blank=True,null=True,)
     # city = models.ForeignKey(City,blank=True,null=True)
     # area = models.ForeignKey(Area,blank=True,null=True)
@@ -67,5 +67,3 @@ class Business_Entity(models.Model):
 class Display_pics(models.Model):
     images = models.ImageField(upload_to = 'entity_pics/', blank = True, null=True)
     entity = models.ForeignKey(Business_Entity)
-
-    

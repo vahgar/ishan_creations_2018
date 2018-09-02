@@ -22,7 +22,7 @@
   {% endif %}
 
   <div class="data">
-    <h3> {{ Entity.name }} </h3>
+    <h3> {{ Entity.name }}  {% if Entity.social_media %} | <a href="{{ Entity.social_media }}"> <i class="fab fa-facebook-square"></i> </a> {% endif %} | {% if Entity.website %}  <a href="{{ Entity.website }}"> <i class="fas fa-globe-asia"></i> </a> {% endif %}  </h3>
     <span>{{ Entity.profile }}</span><br>
     <hr>
     <span id="head">Services: </span> <span>{{ Entity.services }} </span> </p>

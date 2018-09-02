@@ -5,11 +5,12 @@ from django.conf import settings
 
 urlpatterns = [
     # Examples:
-    url(r'^$', 'index.views.index', name='homepage'),
+    url(r'^$', 'entity.views.list_city', name='categories'),
     url(r'^members$', 'index.views.icbc', name='icbc'),
     url(r'^categories$', 'entity.views.list_city', name='categories'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^entity/', include('entity.urls', namespace='entity')),
+    url(r'^home/$', 'index.views.index', name='homepage'),
 
 ]
 if settings:
